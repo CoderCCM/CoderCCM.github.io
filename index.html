@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Instant Exchange</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+
+    </head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+        h2 {
+            font-family: 'Open Sans Condensed', sans-serif;
+        }
+        h1 {
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+    </style>
+    <body style="text-align:center">
+        <img width=200 height=200  style="border-radius: 25px" src="https://i.ibb.co/tYxCZqq/IE.jpg">
+        <hr>
+
+
+        <script>
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+
+
+
+
+            var potentialParams = [["name", "Name"], ["age", "Age"]];
+            potentialParams.forEach(function(item) {
+                var urlParam = item[0];
+                if(urlParams.get(urlParam)){
+                    var paramValue = urlParams.get(urlParam);
+                    var h2 = document.createElement("h2");
+                    h2.innerHTML = item[1];
+                    var h1 = document.createElement("h1");
+                    h1.innerHTML = "<strong>" + paramValue + "</strong";
+                    document.body.append(h2, h1, document.createElement("hr"));
+                }
+
+            })
+        </script>
+    </body>
+</html>
