@@ -18,7 +18,7 @@
     <body style="text-align:center">
         <img width=200 height=200  style="border-radius: 25px" src="https://i.ibb.co/tYxCZqq/IE.jpg">
         <hr>
-
+        <div id="appendHere"></div>
 
         <script>
             const queryString = window.location.search;
@@ -36,7 +36,7 @@
                     h2.innerHTML = item[1];
                     var h1 = document.createElement("h1");
                     h1.innerHTML = "<strong>" + paramValue + "</strong";
-                    document.body.append(h2, h1, document.createElement("hr"));
+                    document.getElementById("appendHere").append(h2, h1, document.createElement("hr"));
                 }
 
             })
