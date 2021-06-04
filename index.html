@@ -28,6 +28,8 @@
 
 
             var potentialParams = [["name", "Name"], ["age", "Age"], ["home_email", "Home Email"], ["work_email", "Work Email"], ["address", "Address"]];
+            var numParamsShown = 0;
+
             potentialParams.forEach(function(item) {
                 var urlParam = item[0];
                 if(urlParams.get(urlParam)){
@@ -37,9 +39,16 @@
                     var h1 = document.createElement("h1");
                     h1.innerHTML = "<strong>" + paramValue + "</strong";
                     document.getElementById("appendHere").append(h2, h1, document.createElement("hr"));
+                    numParamsShown++;
                 }
-
             })
+
+            if (numParamsShown==0) {
+                var p = document.createElement("p");
+                p.innerHTML = "Welcome to Instant Exchange. This is where a user's information woul show if you had followed a QR code. Either a user did not share any information with you or you did not scan a QR code. To use Instant Exchange for yourself, search for it on the Google Play or Apple App Stores.";
+                document.getElementById("appendHere").append(p, document.createElement("hr"));
+            }
+
         </script>
     </body>
 </html>
