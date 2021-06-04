@@ -8,7 +8,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
-        h2 {
+        h2, p {
             font-family: 'Open Sans Condensed', sans-serif;
         }
         h1 {
@@ -45,7 +45,7 @@
 
             if (numParamsShown==0) {
                 var p = document.createElement("p");
-                p.innerHTML = "Welcome to Instant Exchange. This is where a user's information woul show if you had followed a QR code. Either a user did not share any information with you or you did not scan a QR code. To use Instant Exchange for yourself, search for it on the Google Play or Apple App Stores.";
+                p.innerHTML = "Welcome to Instant Exchange. This is where a user's information would show if you had followed a QR code. Either a user did not share any information with you or you did not scan a QR code. To use Instant Exchange for yourself, search for it on the Google Play or Apple App Stores.\n\nIf you'd like to see what this page would look like if you had scanned a QR code, click <a href='https://coderccm.github.io/?name=John%20Doe&&age=22&&home_email=john.doe@home.com&&work_email=jdoe@work.com>here</a>";
                 document.getElementById("appendHere").append(p, document.createElement("hr"));
             }
 
